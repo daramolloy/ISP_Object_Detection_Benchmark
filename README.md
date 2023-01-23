@@ -1,4 +1,4 @@
-# Evaluating the Impact of a Varying ISP on Object Detection Performance
+# Evaluating the Impact of Varying ISP Parameters on Object Detection Performance
 
 
 ## Description
