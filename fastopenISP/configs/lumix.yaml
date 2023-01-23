@@ -1,0 +1,126 @@
+module_enable_status:                 # do NOT modify modules order
+  dpc: False
+  blc: True
+  aaf: True
+  awb: True
+  cnf: True
+  cfa: True
+  ccm: True
+  gac: True
+  tvc: False
+  wnf: False
+  csc: True
+  nlm: False
+  bnf: True
+  ceh: True
+  he:  False
+  eeh: True
+  fcs: True
+  hsc: True
+  bcc: True
+  scl: False
+
+
+hardware:
+  raw_width: 6024
+  raw_height: 4016
+  raw_bit_depth: 12
+  bayer_pattern: rggb
+
+
+# -------------------- Module Algorithms Parameters --------------------
+
+dpc:
+  diff_threshold: 30
+
+blc:
+  bl_r: 510                             # a subtractive value, not additive!
+  bl_gr: 511
+  bl_gb: 511
+  bl_b: 510
+  alpha: 0                            # x1024
+  beta: 0                             # x1024
+
+aaf: ~
+# awb is taken from the "daylight" white balance setting on the camera
+awb:
+  r_gain: &r_gain 2242                # x1024
+  gr_gain: 950                        # x1024
+  gb_gain: 950                        # x1024
+  b_gain: &b_gain 1084                # x1024
+
+cnf:
+  diff_threshold: 0
+  r_gain: *r_gain                     # x1024
+  b_gain: *b_gain                     # x1024
+
+cfa:
+  mode: bilinear
+
+
+
+ccm:
+  ccm:
+    - [ 1481, -193, -263, 0 ]          # x1024, copied from dcraw.c
+    - [ -146, 1572, -402, 0 ]
+    - [ 7, -445, 1462, 0 ]
+ 
+gac:
+  gain: 256                           # x256
+  gamma: 0.42
+
+tvc:
+  weight: 0.1
+  multichannel: True
+  eps: 0.0002
+  iterations: 200
+
+wnf:
+  rescale: True
+  multichannel: True
+  ycbcr: True
+  wavelet_levels: 0
+  sigma: 0
+  
+csc: ~
+
+nlm:
+  search_window_size: 9
+  patch_size: 3
+  h: 10                               # larger value has stronger smoothing effect
+
+bnf:
+  intensity_sigma: 0.5                # larger value has stronger smoothing effect
+  spatial_sigma: 0.4                  # larger value has stronger smoothing effect
+  BNF_kernel_size: 5
+
+ceh:
+  tiles: [4, 6]
+  clip_limit: 0.01
+
+he:
+  num_bins: 256
+  
+eeh:
+  edge_gain: 256                      # x256
+  flat_threshold: 2                   # delta <= flat_threshold: set delta to 0
+  delta_threshold: 128
+  kernel_size: 7
+  sigma: 3.0
+
+fcs:
+  delta_min: 4
+  delta_max: 16
+
+hsc:
+  hue_offset: 0                      # in degree
+  saturation_gain: 256                # x256
+
+bcc:
+  brightness_offset: 0
+  contrast_gain: 256                  # x256
+
+
+scl:
+  newWidth: 6024
+  newHeight: 4016
