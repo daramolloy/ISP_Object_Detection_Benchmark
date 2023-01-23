@@ -11,14 +11,13 @@ To use, set a grid search of ISP parameters and provide raw images with accompan
 
 ## Dependencies
 
-*PyCOCOTools == 2.0.4
-*TIDE == https://github.com/dbolya/tide/pull/21
-*pytorch == 1.11.0
-*torchvision == 0.12.0
-*tqdm == 4.64.0
+* PyCOCOTools == 2.0.4
+* TIDE == https://github.com/dbolya/tide/pull/21
+* pytorch == 1.11.0
+* torchvision == 0.12.0
+* tqdm == 4.64.0
 
-Just to note that your TIDE library will need to be updated as suggested below due to the repo no longer being updated.
-
+Just to note that your TIDE library will need to be updated as suggested below due to the repo no longer being updated. 
 https://github.com/dbolya/tide/pull/21
 
 
@@ -26,8 +25,8 @@ https://github.com/dbolya/tide/pull/21
 
 Contributors names and contact info
 
-*Dara Molloy (https://www.linkedin.com/in/daramolloy/)
-*Brian Deegan (https://www.linkedin.com/in/brian-deegan-54928b60/)
+* Dara Molloy (https://www.linkedin.com/in/daramolloy/)
+* Brian Deegan (https://www.linkedin.com/in/brian-deegan-54928b60/)
 
 
 ## Acknowledgements
