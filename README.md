@@ -33,3 +33,20 @@ Contributors names and contact info
 
 Massive thanks to Qiu Jueqin for creating fast-openISP (https://github.com/QiuJueqin/fast-openISP). 
 Some changes were made to the original library, primarily making the pipeline threads run asynchronously as this gave a big time improvement as well as fixing edge enhancement and adding openCVs CFA interp methods.
+
+
+## Reference
+
+https://zenodo.org/badge/latestdoi/592372763
+
+@software{daramolloy_2023_7802651,
+  author       = {daramolloy},
+  title        = {{daramolloy/ISP\_Object\_Detection\_Benchmark: 
+                   V1.0.0-alpha}},
+  month        = apr,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {V1.0.0-alpha},
+  doi          = {10.5281/zenodo.7802651},
+  url          = {https://doi.org/10.5281/zenodo.7802651}
+}
